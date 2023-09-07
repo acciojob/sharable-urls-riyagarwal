@@ -1,5 +1,5 @@
 // your code here
-const handleBtClick = () => {
+const handleBtnClick = () => {
 	let name = document.getElementById("name").value
 
 	let year = document.getElementById("year").value
@@ -18,5 +18,8 @@ const handleBtClick = () => {
 		str += `year=${year}`
 	}
 
-	document.getElementById("url").innerText = str
+	document.getElementById("url").textContent = str
 }
+
+
+
