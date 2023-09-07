@@ -1,8 +1,22 @@
 // your code here
 const handleBtClick = () => {
 	let name = document.getElementById("name").value
+
 	let year = document.getElementById("year").value
 
-	document.getElementById("url").innerText = 
-		`https://localhost:8080/?name=${name}&year={year}`
+	let str = `https://localhost:8080/?`
+
+	if(name && year) {
+		str += `name=${name}&year=${year}`
+		
+	}
+	else if(name) {
+		str += `name=${name}`
+	}
+
+	else if(year) {
+		str += `year=${year}`
+	}
+
+	document.getElementById("url").innerText = str
 }
